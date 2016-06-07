@@ -16,7 +16,7 @@ fn replace_emojis(map: BTreeMap<&str, &str>, string: String) -> String {
                 p.push_str(" ");
                 return p;
             },
-            None => key.to_owned()
+            None => cap.at(0).unwrap().to_owned()
         }
     })
 }
@@ -34,6 +34,11 @@ fn main() {
     M!("wink",        "\u{1F609}");
     M!("relaxed",     "\u{1F60A}");
     M!("yum",         "\u{1F60B}");
+    M!("relieved",    "\u{1F60C}");
+    M!("heart_eyes",  "\u{1F60D}");
+    M!("smirk",       "\u{1F60F}");
+    M!("unamused",    "\u{1F612}");
+    M!("sweat",       "\u{1F613}");
 
     let output = match env::args().skip(1).next() {
         Some(string) => {
