@@ -112,7 +112,7 @@ fn replace_emojis(string: String) -> String {
         match MAP.get(key) {
             Some(&value) => {
                 let mut p = value.to_owned();
-                p.push_str(" ");
+                p.push(' ');
                 return p;
             },
             None => cap.at(0).unwrap().to_owned()
@@ -121,18 +121,17 @@ fn replace_emojis(string: String) -> String {
 }
 
 fn main() {
-    let output = match env::args().skip(1).next() {
-        Some(string) => {
-            let mut str = replace_emojis(string);
+    let string = match env::args().skip(1).next() {
+        Some(mut str) => {
             str.push('\n');
             str
         },
         None => {
             let mut buffer = String::new();
             io::stdin().read_to_string(&mut buffer).unwrap();
-            replace_emojis(buffer)
+            buffer
         }
     };
-    let bytes = output.into_bytes();
+    let bytes = replace_emojis(string).into_bytes();
     io::stdout().write(&bytes[..]).unwrap();
 }
