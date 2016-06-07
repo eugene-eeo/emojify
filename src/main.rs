@@ -25,6 +25,7 @@ fn main() {
     let mut map = BTreeMap::new();
     macro_rules! M { ($k:expr, $v:expr) => { map.insert($k, $v); } }
 
+    // Emoticons
     M!("grin",          "\u{1F601}");
     M!("joy",           "\u{1F602}");
     M!("smiley",        "\u{1F603}");
