@@ -85,6 +85,36 @@ fn main() {
     M!("person_with_pouting_face", "🙎");
     M!("pray",          "🙏");
 
+    // Dingbats
+    M!("scissors",         "✂️");
+    M!("white_check_mark", "✅");
+    M!("airplane",         "✈");
+    M!("envelope",         "✉");
+    M!("fist",             "✊");
+    M!("hand",             "✋");
+    M!("v",                "✌");
+    M!("pencil2",          "✏");
+    M!("black_nib",        "✒");
+    M!("heavy_check_mark", "✔");
+    M!("heavy_multiplication_x", "✖");
+    M!("sparkles",         "✨");
+    M!("eight_spoked_asterisk", "✳");
+    M!("eight_pointed_black_star", "✴");
+    M!("snowflake",        "❄");
+    M!("sparkle",          "❇");
+    M!("x",                "❌");
+    M!("negative_squared_cross_mark", "❎");
+    M!("question",         "❓");
+    M!("grey_question",    "❔");
+    M!("grey_exclamation", "❕");
+    M!("exclamation",      "❗");
+    M!("heart",            "❤");
+    M!("heavy_plus_sign",  "➕");
+    M!("heavy_minus_sign", "➖");
+    M!("heavy_division_sign", "➗");
+    M!("arrow_right",      "➡");
+    M!("curly_loop",       "➰");
+
     let output = match env::args().skip(1).next() {
         Some(string) => {
             let mut str = replace_emojis(map, string);
