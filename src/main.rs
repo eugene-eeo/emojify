@@ -113,7 +113,7 @@ fn replace_emojis(string: String) -> String {
             Some(&value) => {
                 let mut p = value.to_owned();
                 p.push(' ');
-                return p;
+                p
             },
             None => cap.at(0).unwrap().to_owned()
         }
