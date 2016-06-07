@@ -1,9 +1,0 @@
-
-    $ emojify_
-
-    A command line tool to replace GitHub emoji codes
-    with their emoticon equivalents. Written in Rust.
-
-      $ cat file | emojify
-      $ emojify ":smile: relaxing :relaxed:"
-      😄 relaxing 😊
