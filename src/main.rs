@@ -62,6 +62,24 @@ fn main() {
     M!("astonished",    "\u{1F632}");
     M!("mask",          "\u{1F637}");
     M!("smile_cat",     "\u{1F638}");
+    M!("joy_cat",       "\u{1F639}");
+    M!("smiley_cat",    "\u{1F63A}");
+    M!("heart_eyes_cat","\u{1F63B}");
+    M!("kissing_cat",   "\u{1F63D}");
+    M!("pouting_cat",   "\u{1F63E}");
+    M!("crying_cat_face","\u{1F63F}");
+    M!("scream_cat",    "\u{1F640}");
+    M!("no_good",       "\u{1F645}");
+    M!("ok_woman",      "\u{1F646}");
+    M!("bow",           "\u{1F647}");
+    M!("see_no_evil",   "\u{1F648}");
+    M!("hear_no_evil",  "\u{1F649}");
+    M!("speak_no_evil", "\u{1F64A}");
+    M!("raising_hand",  "\u{1F64B}");
+    M!("raised_hands",  "\u{1F64C}");
+    M!("person_frowning", "\u{1F64D}");
+    M!("person_with_pouting_face", "\u{1F64E}");
+    M!("pray",          "\u{1F64F}");
 
     let output = match env::args().skip(1).next() {
         Some(string) => {
