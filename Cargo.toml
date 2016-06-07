@@ -5,3 +5,4 @@ authors = ["Eeo Jun <packwolf58@gmail.com>"]
 
 [dependencies]
 regex = "0.1"
+lazy_static = "0.1.*"
