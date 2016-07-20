@@ -9,7 +9,6 @@ use regex::Regex;
 use regex::Captures;
 
 lazy_static! {
-    static ref PATTERN: Regex = Regex::new(r":([a-z0-9_]+?):").unwrap();
     static ref MAP: HashMap<&'static str, &'static str> = {
         let mut m = HashMap::new();
 
@@ -107,7 +106,8 @@ lazy_static! {
 }
 
 fn replace_emojis(string: String) -> String {
-    PATTERN.replace_all(&string, |cap: &Captures| {
+    let pattern = Regex::new(r":([a-z0-9_]+?):").unwrap();
+    pattern.replace_all(&string, |cap: &Captures| {
         let key = cap.at(1).unwrap();
         match MAP.get(key) {
             Some(&value) => {
