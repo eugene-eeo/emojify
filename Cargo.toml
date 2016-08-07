@@ -1,7 +1,7 @@
 [package]
 name = "emojify"
 version = "0.1.0"
-authors = ["Eeo Jun <packwolf58@gmail.com>"]
+authors = ["Eeo Jun <141bytes@gmail.com>"]
 
 [dependencies]
 regex = "0.1"
